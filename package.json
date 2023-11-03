@@ -1,5 +1,5 @@
 {
-  "name": "google-merchant-feed",
+  "name": "@xcommerceweb/google-merchant-feed",
   "version": "0.1.0",
   "description": "A simple library to generate Google Merchant XML Feed",
   "author": "Douglas Gusson",
