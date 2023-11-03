@@ -1,4 +1,4 @@
-import { FeedBuilder } from "google-merchant-feed";
+import { FeedBuilder } from "@xcommerceweb/google-merchant-feed";
 
 const feedBuilder = new FeedBuilder();
 
