@@ -2,20 +2,16 @@
 
 A simple library to generate Google Merchant XML Feed
 
-[![npm version](https://badge.fury.io/js/@xcommerceweb%2Fgoogle-merchant-feed.svg)](https://badge.fury.io/js/@xcommerceweb%2Fgoogle-merchant-feed)
-[![CI](https://github.com/xcommerceweb/google-merchant-feed/actions/workflows/ci.yml/badge.svg)](https://github.com/xcommerceweb/google-merchant-feed/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ## Installation
 
 ```bash
-npm install @xcommerceweb/google-merchant-feed
+npm install @themachinarium/google-merchant-feed
 ```
 
 ## Usage
 
 ```typescript
-import { FeedBuilder } from "@xcommerceweb/google-merchant-feed";
+import { FeedBuilder } from "@themachinarium/google-merchant-feed";
 
 const feedBuilder = new FeedBuilder();
 

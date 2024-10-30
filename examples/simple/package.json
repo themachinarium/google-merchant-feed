@@ -11,6 +11,6 @@
   "author": "Douglas Gusson",
   "license": "MIT",
   "dependencies": {
-    "@xcommerceweb/google-merchant-feed": "file:../../"
+    "@themachinarium/google-merchant-feed": "file:../../"
   }
 }

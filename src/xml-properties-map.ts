@@ -240,4 +240,5 @@ export const xmlPropertiesMap: Record<keyof Product, XmlPropertiesMapNode> = {
   transitTimeLabel: {
     xmlName: "g:transit_time_label",
   },
+  category: { xmlName: "g:category" },
 };
