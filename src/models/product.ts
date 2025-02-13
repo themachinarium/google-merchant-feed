@@ -92,5 +92,5 @@ export type Product = {
   productCode?:string|number;
   variantId?:string|number;
   totalRevenue?: string;
-  totalQuantity?: string;
+  totalRevenueQuantity?: string;
 };
