@@ -241,4 +241,8 @@ export const xmlPropertiesMap: Record<keyof Product, XmlPropertiesMapNode> = {
     xmlName: "g:transit_time_label",
   },
   category: { xmlName: "g:category" },
+  productCode: { xmlName: "g:product_code" },
+  variantId: { xmlName: "g:variant_id" },
+  totalRevenue: { xmlName: "g:total_revenue" },
+  totalRevenueQuantity: { xmlName: "g:total_revenue_quantity" },
 };
