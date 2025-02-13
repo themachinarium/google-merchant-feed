@@ -245,4 +245,5 @@ export const xmlPropertiesMap: Record<keyof Product, XmlPropertiesMapNode> = {
   variantId: { xmlName: "g:variant_id" },
   totalRevenue: { xmlName: "g:total_revenue" },
   totalRevenueQuantity: { xmlName: "g:total_revenue_quantity" },
+  shopifyId: { xmlName: "g:shopify_id" },
 };

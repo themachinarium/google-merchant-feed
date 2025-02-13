@@ -93,4 +93,5 @@ export type Product = {
   variantId?:string|number;
   totalRevenue?: string;
   totalRevenueQuantity?: string;
+  shopifyId?: number;
 };
