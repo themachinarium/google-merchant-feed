@@ -1,0 +1,44 @@
+name: Publish NPM Package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "main"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20.x"
+
+      - name: Authenticate with private NPM package
+        run: echo -e "@themachinarium:registry=https://npm.pkg.github.com/\n//npm.pkg.github.com/:_authToken=${{ secrets.PACKAGE_PUBLISHER_TOKEN }}" > ~/.npmrc
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Publish to GitHub Package Registry
+        run: npm publish --registry https://npm.pkg.github.com/ --scope @themachinarium
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_PUBLISHER_TOKEN }}
+
+      - name: Create Git Tag
+        if: ${{ success() }}
+        run: |
+          version=$(node -p "require('./package.json').version")
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git tag "v$version"
+          git push origin "v$version"
