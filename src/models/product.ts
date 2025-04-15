@@ -89,8 +89,8 @@ export type Product = {
   tax?: Tax;
   taxCategory?: string;
   category?: string;
-  productCode?:string|number;
-  variantId?:string|number;
+  productCode?: string | number;
+  variantId?: string | number;
   totalRevenue?: string;
   totalRevenueQuantity?: string;
   shopifyId?: number;
